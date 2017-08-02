@@ -6,22 +6,13 @@
 
 // apiKey: "AIzaSyARBt0KpGyGMoEle_MskA5Xz56lPvOJE7g"
 
-var location1;
-var res1;
 
-$(".submit").on("click", function() {
-	preventDefault();
+//create input function and maps 
 
-	var location1 = $("#address_1").val();
-	var res1 = location1.toString().replace(/ /g,"+");
+//create list of addresses to put it firebase database
 
-
-	console.log(location1);
-	console.log(res1);
-
-	
-
-});
+//create buttons (look at giftastic)
 
 
 // https://maps.googleapis.com/maps/api/js?key=AIzaSyARBt0KpGyGMoEle_MskA5Xz56lPvOJE7g&callback=initMap
+
