@@ -1,4 +1,4 @@
-
+//Initialize Firebase
 
 // Google maps API
 // async defer src="https://maps.googleapis.com/maps/api/js?key=YOUR_API_KEY&callback=initMap"
@@ -30,15 +30,26 @@ window.onload = function() {
 };
 
 
-
-
-
-
 // $(".location").on("click", function() {
 // 	preventDefault();
 
 
 // })
+
+//onclick function for friends address menu 
+	//inside slide out id refer to info in database and add firends info 
+
+//onclick function submit
+	// get id value of name 
+	// get id value for address
+
+//store values in firebase 
+
+//Create variable to reference database 
+
+//temporary object for holding the data
+
+//upload data to database 
 
 
 
