@@ -68,7 +68,7 @@ $("#submit").on("click", function(){
 })
 
 
-	// get id value of name 
+	// get id value of name
 	// get id value for address
 
 //store values in firebase
