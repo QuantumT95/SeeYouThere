@@ -1,4 +1,17 @@
-//Initialize Firebase
+// Initialize Firebase
+  var config = {
+    apiKey: "AIzaSyAVzyhipabzN_dHteXvpAC7l9VP8fvK4Y4",
+    authDomain: "seeyouthere-175217.firebaseapp.com",
+    databaseURL: "https://seeyouthere-175217.firebaseio.com",
+    projectId: "seeyouthere-175217",
+    storageBucket: "seeyouthere-175217.appspot.com",
+    messagingSenderId: "764610033809"
+  };
+
+firebase.initializeApp(config);
+
+// Create a variable to reference the database.
+var database = firebase.database();
 
 // Google maps API
 // async defer src="https://maps.googleapis.com/maps/api/js?key=YOUR_API_KEY&callback=initMap"
