@@ -2,7 +2,7 @@
 
 // Google maps API
 // async defer src="https://maps.googleapis.com/maps/api/js?key=YOUR_API_KEY&callback=initMap"
- 
+
 
 // apiKey: "AIzaSyB45u6q4Ep9T99aYb1tEo2NmkJ-vxJD8pk"
 
@@ -36,22 +36,25 @@ window.onload = function() {
 
 // })
 
-//onclick function for friends address menu 
-	//inside slide out id refer to info in database and add firends info 
+//onclick function for friends address menu
+	//inside slide out id refer to info in database and add firends info
 
 //onclick function submit
-	// get id value of name 
+	// get id value of name
 	// get id value for address
 
-//store values in firebase 
+//store values in firebase
 
-//Create variable to reference database 
+//Create variable to reference database
 
 //temporary object for holding the data
 
-//upload data to database 
+//upload data to database
 
 
 
 
 // https://maps.googleapis.com/maps/api/js?key=AIzaSyARBt0KpGyGMoEle_MskA5Xz56lPvOJE7g&callback=initMap
+
+
+$(".button-collapse").sideNav();//makes the nave work
