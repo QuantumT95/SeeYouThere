@@ -52,7 +52,22 @@ window.onload = function() {
 //onclick function for friends address menu 
 	//inside slide out id refer to info in database and add firends info 
 
+// global variable for name and addresses
+var id = [];
+var place = [];
+
 //onclick function submit
+$("#submit").on("click", function(){
+  event.preventDefault();
+  var name = $("#name").val();
+  id.push(name);
+  var address = $("#address").val();
+  place.push(address);
+  console.log(id);
+  console.log(place);
+})
+
+
 	// get id value of name 
 	// get id value for address
 
