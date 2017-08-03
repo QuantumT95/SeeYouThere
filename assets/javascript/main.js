@@ -65,7 +65,18 @@ $("#submit").on("click", function(){
   place.push(address);
   console.log(id);
   console.log(place);
-})
+  friendButton();
+});
+
+function friendButton() {
+  for (var i=0; i < id.length; i++) {
+    var list = $("<li><a href='#!'");
+    list.addClass("id");
+    list.attr("data-name", id[i]);
+    list.text(id[i]);
+    $("#slide-out").append(list);
+  }
+}
 
 
 	// get id value of name 
@@ -85,4 +96,4 @@ $("#submit").on("click", function(){
 // https://maps.googleapis.com/maps/api/js?key=AIzaSyARBt0KpGyGMoEle_MskA5Xz56lPvOJE7g&callback=initMap
 
 
-$(".button-collapse").sideNav();//makes the nave work
+$(".button-collapse").sideNav(); //makes the nave work
