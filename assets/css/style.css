@@ -10,6 +10,10 @@
 body{
   background-color: #d1c4e9;
 }
+
+#loader{
+  display: none;
+}
 /*
 btn{
 position: 50%;

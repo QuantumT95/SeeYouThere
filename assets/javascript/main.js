@@ -134,7 +134,12 @@ $(".button-collapse").sideNav(); //makes the nave work
 $(".friendList").on("click", function(){
   $('.button-collapse').sideNav('hide'); //hide nav
   // display preloader
+  $(".preloader-wrapper").show();
   //spin for amoount of time
+  setTimeout(function(){
+    $('.preloader-wrapper').fadeOut();
+    $('.preloader-wrapper').delay(150).fadeOut('fast');
+  }, 5000);
   //display location stuff
 
 });
