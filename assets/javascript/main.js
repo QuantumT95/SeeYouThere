@@ -58,7 +58,7 @@ var place = [];
 
 //onclick function submit
 $("#submit").on("click", function(event){
-  
+
   // Preventing the submit button from trying to submit the form
   event.preventDefault();
 
