@@ -39,19 +39,19 @@ window.onload = function() {
 
 // Set long + lat to local storage so we can refer to it later on
 setTimeout(function(){
- console.log($("#startLon").text()); 
+ console.log($("#startLon").text());
 }, 6000);
 
 setTimeout(function(){
- localStorage.setItem("longitude", $("#startLon").text()); 
+ localStorage.setItem("longitude", $("#startLon").text());
 }, 6000);
 
 setTimeout(function(){
- console.log($("#startLat").text()); 
+ console.log($("#startLat").text());
 }, 6000);
 
 setTimeout(function(){
- localStorage.setItem("latitude", $("#startLat").text()); 
+ localStorage.setItem("latitude", $("#startLat").text());
 }, 6000);
 
 // global variable for name and addresses
@@ -141,10 +141,10 @@ $(".friendList").on("click", function(){
   $(".preloader-wrapper").show();
 
   //spin for amoount of time
-  // setTimeout(function(){
-  //   $('.preloader-wrapper').fadeOut();
-  //   $('.preloader-wrapper').delay(150).fadeOut('fast');
-  // }, 5000);
+  setTimeout(function(){
+    $('.preloader-wrapper').fadeOut();
+    $('.preloader-wrapper').delay(150).fadeOut('fast');
+  }, 5000);
 
   //display location stuff
 
