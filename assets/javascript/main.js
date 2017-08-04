@@ -74,7 +74,7 @@ var place = [];
 
 //onclick function submit
 $("#submit").on("click", function(event){
-  
+
   // Preventing the submit button from trying to submit the form
   event.preventDefault();
 
@@ -151,7 +151,12 @@ $(".button-collapse").sideNav(); //makes the nave work
 $(".friendList").on("click", function(){
   $('.button-collapse').sideNav('hide'); //hide nav
   // display preloader
+  $(".preloader-wrapper").show();
   //spin for amoount of time
+  setTimeout(function(){
+    $('.preloader-wrapper').fadeOut();
+    $('.preloader-wrapper').delay(150).fadeOut('fast');
+  }, 5000);
   //display location stuff
 
 });
