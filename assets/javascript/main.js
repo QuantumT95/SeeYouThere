@@ -29,9 +29,7 @@ src="//maps.googleapis.com/maps/api/js?v=3.exp&sensor=true"
 
 // https://maps.googleapis.com/maps/api/js?key=AIzaSyARBt0KpGyGMoEle_MskA5Xz56lPvOJE7g&callback=initMap
 
-
-
-
+// On window load will get and paste our latitude + longitude onto the page
 window.onload = function() {
   var startPos;
   var geoSuccess = function(position) {
@@ -42,6 +40,24 @@ window.onload = function() {
   navigator.geolocation.getCurrentPosition(geoSuccess);
 };
 
+// Set long + lat to local storage so we can refer to it later on
+// localStorage.setItem("longitude", $("#startLon").val());
+// localStorage.setItem("latitude", $("#startLat").val());
+
+setTimeout(function(){ console.log($("#startLon").text()); }, 6000);
+setTimeout(function(){ localStorage.setItem("longitude", $("#startLon").text()); }, 6000);
+setTimeout(function(){ console.log($("#startLat").text()); }, 6000);
+setTimeout(function(){ localStorage.setItem("latitude", $("#startLat").text()); }, 6000);
+
+
+
+// Object to store our longitude and latitude
+// var userLocation = {
+//   longitude: $("#startLon"),
+//   latitude: $("#startLat")
+// }
+
+// console.log("userLocation: " + userLocation);
 
 // $(".location").on("click", function() {
 // 	preventDefault();
@@ -67,7 +83,7 @@ $("#submit").on("click", function(event){
   var address = $("#address").val();
 
   // Creates local "temporary" object for holding our friends data
-  var newFriend= {
+  var newFriend = {
     name: name,
     address: address
   };
@@ -80,6 +96,7 @@ $("#submit").on("click", function(event){
   console.log(newFriend.address);
   // friendButton();
 });
+
 
 // function friendButton() {
 //   for (var i=0; i < id.length; i++) {
@@ -113,7 +130,7 @@ database.ref().on("child_added", function(childSnapshot, prevChildKey) {
   console.log(address);
 
   // Add each friends data into the list
-  $("#slide-out").append(name + address);
+  $("#slide-out").append("friend name: " + name + " " + "address: " + address + " ");
 
 });
 
