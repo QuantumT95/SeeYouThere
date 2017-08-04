@@ -97,3 +97,11 @@ function friendButton() {
 
 
 $(".button-collapse").sideNav(); //makes the nave work
+
+$(".friendList").on("click", function(){
+  $('.button-collapse').sideNav('hide'); //hide nav
+  // display preloader
+  //spin for amoount of time
+  //display location stuff
+
+});
