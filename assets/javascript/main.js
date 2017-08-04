@@ -99,6 +99,26 @@ $("#submit").on("click", function(event){
 
 //Create variable to reference database
 
+// 3. Create Firebase event for adding friends to the database and a list in the slideout when a user adds a friend
+database.ref().on("child_added", function(childSnapshot, prevChildKey) {
+
+  console.log(childSnapshot.val());
+
+  // Store everything into a variable.
+  var name = childSnapshot.val().name;
+  var address = childSnapshot.val().address;
+
+  // Friend Info
+  console.log(name);
+  console.log(address);
+
+  // Add each friends data into the list
+  $("#slide-out").append(name + address);
+
+});
+
+
+
 //temporary object for holding the data
 
 //upload data to database
