@@ -57,26 +57,39 @@ var id = [];
 var place = [];
 
 //onclick function submit
-$("#submit").on("click", function(){
+$("#submit").on("click", function(event){
+  
+  // Preventing the submit button from trying to submit the form
   event.preventDefault();
+
+  //Grabs user input for name + address
   var name = $("#name").val();
-  id.push(name);
   var address = $("#address").val();
-  place.push(address);
-  console.log(id);
-  console.log(place);
-  friendButton();
+
+  // Creates local "temporary" object for holding our friends data
+  var newFriend= {
+    name: name,
+    address: address
+  };
+
+  // Uploads Friend data to the database
+  database.ref().push(newFriend);
+
+  // Logs data into console
+  console.log(newFriend.name);
+  console.log(newFriend.address);
+  // friendButton();
 });
 
-function friendButton() {
-  for (var i=0; i < id.length; i++) {
-    var list = $("<li><a href='#!'");
-    list.addClass("id");
-    list.attr("data-name", id[i]);
-    list.text(id[i]);
-    $("#slide-out").append(list);
-  }
-}
+// function friendButton() {
+//   for (var i=0; i < id.length; i++) {
+//     var list = $("<li><a href='#!'");
+//     list.addClass("id");
+//     list.attr("data-name", id[i]);
+//     list.text(id[i]);
+//     $("#slide-out").append(list);
+//   }
+// }
 
 
 	// get id value of name
@@ -97,3 +110,11 @@ function friendButton() {
 
 
 $(".button-collapse").sideNav(); //makes the nave work
+
+$(".friendList").on("click", function(){
+  $('.button-collapse').sideNav('hide'); //hide nav
+  // display preloader
+  //spin for amoount of time
+  //display location stuff
+
+});
