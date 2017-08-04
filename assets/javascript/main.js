@@ -38,10 +38,21 @@ window.onload = function() {
 };
 
 // Set long + lat to local storage so we can refer to it later on
-setTimeout(function(){ console.log($("#startLon").text()); }, 6000);
-setTimeout(function(){ localStorage.setItem("longitude", $("#startLon").text()); }, 6000);
-setTimeout(function(){ console.log($("#startLat").text()); }, 6000);
-setTimeout(function(){ localStorage.setItem("latitude", $("#startLat").text()); }, 6000);
+setTimeout(function(){
+ console.log($("#startLon").text()); 
+}, 6000);
+
+setTimeout(function(){
+ localStorage.setItem("longitude", $("#startLon").text()); 
+}, 6000);
+
+setTimeout(function(){
+ console.log($("#startLat").text()); 
+}, 6000);
+
+setTimeout(function(){
+ localStorage.setItem("latitude", $("#startLat").text()); 
+}, 6000);
 
 // global variable for name and addresses
 var id = [];
