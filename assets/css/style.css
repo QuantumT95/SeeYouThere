@@ -13,13 +13,17 @@ body{
 
 #loader{
   display: none;
+  position:relative;
+  height: 275px;
+  width: 275px;
+
 }
+
+
+
 /*
 btn{
 position: 50%;
-
 }
-
 #submit{
-
 }*/
