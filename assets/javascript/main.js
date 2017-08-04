@@ -16,16 +16,13 @@ var database = firebase.database();
 // Google maps API
 // async defer src="https://maps.googleapis.com/maps/api/js?key=YOUR_API_KEY&callback=initMap"
 
-
 // apiKey: "AIzaSyB45u6q4Ep9T99aYb1tEo2NmkJ-vxJD8pk"
-
 
 // Geolocation url for finding current location
 src="https://www.googleapis.com/geolocation/v1/geolocate?key=AIzaSyB45u6q4Ep9T99aYb1tEo2NmkJ-vxJD8pk"
 
 // Google Maps API v3 - create google maps on fly and add our current position to it
 src="//maps.googleapis.com/maps/api/js?v=3.exp&sensor=true"
-
 
 // https://maps.googleapis.com/maps/api/js?key=AIzaSyARBt0KpGyGMoEle_MskA5Xz56lPvOJE7g&callback=initMap
 
@@ -41,32 +38,10 @@ window.onload = function() {
 };
 
 // Set long + lat to local storage so we can refer to it later on
-// localStorage.setItem("longitude", $("#startLon").val());
-// localStorage.setItem("latitude", $("#startLat").val());
-
 setTimeout(function(){ console.log($("#startLon").text()); }, 6000);
 setTimeout(function(){ localStorage.setItem("longitude", $("#startLon").text()); }, 6000);
 setTimeout(function(){ console.log($("#startLat").text()); }, 6000);
 setTimeout(function(){ localStorage.setItem("latitude", $("#startLat").text()); }, 6000);
-
-
-
-// Object to store our longitude and latitude
-// var userLocation = {
-//   longitude: $("#startLon"),
-//   latitude: $("#startLat")
-// }
-
-// console.log("userLocation: " + userLocation);
-
-// $(".location").on("click", function() {
-// 	preventDefault();
-
-
-// })
-
-//onclick function for friends address menu
-	//inside slide out id refer to info in database and add firends info
 
 // global variable for name and addresses
 var id = [];
@@ -131,7 +106,6 @@ database.ref().on("child_added", function(childSnapshot, prevChildKey) {
 
   // Add each friends data into the list
   $("#slide-out").append("friend name: " + name + " " + "address: " + address + " ");
-
 });
 
 
