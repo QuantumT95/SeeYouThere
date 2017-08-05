@@ -136,7 +136,7 @@ function initialize() {
 }
 
 var googleMyKey = "AIzaSyB45u6q4Ep9T99aYb1tEo2NmkJ-vxJD8pk";
-        function loadScript() {
+        function loadScript(){
             var script = document.createElement('script');
             script.type = 'text/javascript';
             script.src = "https://maps.googleapis.com/maps/api/js?key=" + googleMyKey + "&sensor=false&callback=initialize";
@@ -149,14 +149,13 @@ var googleMyKey = "AIzaSyB45u6q4Ep9T99aYb1tEo2NmkJ-vxJD8pk";
 // $.ajax({
 //       url: "https://api.yelp.com/oauth2/token",
 //       method: "POST"
-//     }).done(function(response) {
+//     }).done(function(response) {.
 //       console.log(response);
 //     });
 
 
  // src = "https://maps.googleapis.com/maps/api/js?key=AIzaSyARBt0KpGyGMoEle_MskA5Xz56lPvOJE7g&callback=initMap"
 
-$(".button-collapse").sideNav(); //makes the nav work
 
 $(".friendList").on("click", function() {
   $('.button-collapse').sideNav('hide'); //hide nav
@@ -172,14 +171,12 @@ $(".friendList").on("click", function() {
     showMapChoices();
   },2000);
 
-  // $("#map").show();
-  // $("#topChoices").show();
-  //need to disaply map after time out is done showMap();
-  //display location stuff
 });
+
+$(".button-collapse").sideNav(); //makes the nav work
 
 function showMapChoices(){
   console.log("beep");
-  $("#map").show();
+  $("#map_canvas").show();
   $("#topChoices").show();
 }
