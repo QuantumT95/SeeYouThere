@@ -14,7 +14,7 @@ firebase.initializeApp(config);
 var database = firebase.database();
 
 // Google maps API
-// async defer src="https://maps.googleapis.com/maps/api/js?key=YOUR_API_KEY&callback=initMap"
+// async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyB45u6q4Ep9T99aYb1tEo2NmkJ-vxJD8pk&callback=initMap"
 
 // apiKey: "AIzaSyB45u6q4Ep9T99aYb1tEo2NmkJ-vxJD8pk"
 
@@ -24,7 +24,7 @@ src = "https://www.googleapis.com/geolocation/v1/geolocate?key=AIzaSyB45u6q4Ep9T
 // Google Maps API v3 - create google maps on fly and add our current position to it
 src = "//maps.googleapis.com/maps/api/js?v=3.exp&sensor=true"
 
-// https://maps.googleapis.com/maps/api/js?key=AIzaSyARBt0KpGyGMoEle_MskA5Xz56lPvOJE7g&callback=initMap
+// src = "https://maps.googleapis.com/maps/api/js?key=AIzaSyARBt0KpGyGMoEle_MskA5Xz56lPvOJE7g&callback=initMap"
 
 // On window load will get and paste our latitude + longitude onto the page
 window.onload = function() {
@@ -128,8 +128,7 @@ database.ref().on("child_added", function(childSnapshot, prevChildKey) {
 
 
 
-// https://maps.googleapis.com/maps/api/js?key=AIzaSyARBt0KpGyGMoEle_MskA5Xz56lPvOJE7g&callback=initMap
-
+// src = "https://maps.googleapis.com/maps/api/js?key=AIzaSyARBt0KpGyGMoEle_MskA5Xz56lPvOJE7g&callback=initMap"
 
 $(".button-collapse").sideNav(); //makes the nav work
 

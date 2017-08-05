@@ -20,5 +20,10 @@ body {
 }
 
 #map{
+  height: 400px;
+  width: 100%;
+}
+
+#userLoc{
   display: none;
 }
