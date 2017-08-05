@@ -19,7 +19,14 @@ body{
 
 }
 
+#map {
+  height: 100%;
+  bottom-margin: 50px;
+      }
 
+html, body {
+  height: 400px;
+      }
 
 /*
 btn{

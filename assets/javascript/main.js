@@ -26,6 +26,15 @@ src="//maps.googleapis.com/maps/api/js?v=3.exp&sensor=true"
 
 // https://maps.googleapis.com/maps/api/js?key=AIzaSyARBt0KpGyGMoEle_MskA5Xz56lPvOJE7g&callback=initMap
 
+//map function
+function myMap() {
+var mapProp= {
+    center:new google.maps.LatLng(51.508742,-0.120850),
+    zoom:5,
+};
+var map=new google.maps.Map(document.getElementById("googleMap"),mapProp);
+}
+
 // On window load will get and paste our latitude + longitude onto the page
 window.onload = function() {
   var startPos;
@@ -118,7 +127,6 @@ database.ref().on("child_added", function(childSnapshot, prevChildKey) {
   // Add each friends data into the list
   $("#slide-out").append("friend name: " + name + " " + "address: " + address + " ");
 });
-
 
 
 //temporary object for holding the data
