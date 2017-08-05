@@ -8,10 +8,16 @@
 	<link rel="stylesheet" type="text/css" href="assets/css/style.css">
 	<link href="https://fonts.googleapis.com/css?family=Patua+One" rel="stylesheet">
 	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.100.1/css/materialize.min.css">
+
 	<title>See You There!</title>
+
+	<script src="https://www.gstatic.com/firebasejs/4.2.0/firebase.js"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.100.1/js/materialize.min.js"></script>
+	<script type="text/javascript" src="assets/javascript/main.js"></script>
 </head>
 
-<body>
+<body onload="loadScript()">
 
 	<!--TITLE-->
 	<nav>
@@ -63,44 +69,6 @@
 				</div>
 			</div>
 		</div>
-
-		<div class="row">
-			<div class="col s4 offset-s4">
-				<!--MAP-->
-				<div id="map"></div>
-			</div>
-		</div>
-		<div class="row">
-			<div class="col s4 offset-s4">
-				<div id="userLoc">
-					Latitude:
-					<p id="startLat"></p>
-					Longitude:
-					<p id="startLon"></p>
-				</div>
-			</div>
-		</div>
-
-		<!--YELP CARDS-->
-		<div id="topChoices">
-			<!-- <div class="row">
-        <div class="col s12 m7">
-          <div class="card">
-            <div class="card-image">
-              <img src="images/sample-1.jpg">
-              <span class="card-title">Card Title</span>
-            </div>
-            <div class="card-content">
-              <p>I am a very simple card. I am good at containing small bits of information.
-              I am convenient because I require little markup to use effectively.</p>
-            </div>
-            <div class="card-action">
-              <a href="#">This is a link</a>
-            </div>
-          </div>
-        </div>
-      </div> -->
-		</div>
 	</div>
 
 
@@ -122,12 +90,53 @@
 				</div>
 			</div>
 		</div>
-	</div>
 
-	<script src="https://www.gstatic.com/firebasejs/4.2.0/firebase.js"></script>
-	<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
-	<script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.100.1/js/materialize.min.js"></script>
-	<script type="text/javascript" src="assets/javascript/main.js"></script>
+		<div class="row">
+			<div class="col s4 offset-s4">
+				<!--MAP-->
+<<<<<<< HEAD
+				<div id="map_canvas"></div>
+=======
+				<div id="map">
+					<!-- map should be here -->
+				</div>
+>>>>>>> d9d18c88a6623a29b0f1c3a1c898c03f9fef8731
+			</div>
+		</div>
+
+
+		<div class="row">
+			<div class="col s4 offset-s4">
+				<div id="userLoc">
+					Latitude:
+					<p id="startLat"></p>
+					Longitude:
+					<p id="startLon"></p>
+				</div>
+			</div>
+		</div>
+
+		<!--YELP CARDS-->
+		<div id="topChoices">
+			<div class="row">
+				<div class="col s12 m7">
+					<div class="card">
+						<div class="card-image">
+							<!-- <img src="images/sample-1.jpg"> -->
+							<span class="card-title">Resturaunt choice</span>
+						</div>
+						<div class="card-content">
+							<p>Resturaunt info</p>
+						</div>
+						<div class="card-action">
+							<a href="#">Website</a>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+
+	</div>
 </body>
 
 </html>

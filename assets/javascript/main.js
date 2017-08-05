@@ -24,7 +24,7 @@ src = "https://www.googleapis.com/geolocation/v1/geolocate?key=AIzaSyB45u6q4Ep9T
 // Google Maps API v3 - create google maps on fly and add our current position to it
 src = "//maps.googleapis.com/maps/api/js?v=3.exp&sensor=true"
 
-src = "https://maps.googleapis.com/maps/api/js?key=AIzaSyARBt0KpGyGMoEle_MskA5Xz56lPvOJE7g&callback=initMap"
+// src = "https://maps.googleapis.com/maps/api/js?key=AIzaSyARBt0KpGyGMoEle_MskA5Xz56lPvOJE7g&callback=initMap"
 
 // On window load will get and paste our latitude + longitude onto the page
 window.onload = function() {
@@ -125,6 +125,25 @@ database.ref().on("child_added", function(childSnapshot, prevChildKey) {
 
 //upload data to database
 
+function initialize() {
+            var latlng = new google.maps.LatLng(-34.397, 150.644);
+            var myOptions = {
+                zoom: 8,
+                center: latlng,
+            };
+            var map = new google.maps.Map(document.getElementById("map_canvas"),
+        myOptions);
+}
+
+var googleMyKey = "AIzaSyB45u6q4Ep9T99aYb1tEo2NmkJ-vxJD8pk";
+        function loadScript() {
+            var script = document.createElement('script');
+            script.type = 'text/javascript';
+            script.src = "https://maps.googleapis.com/maps/api/js?key=" + googleMyKey + "&sensor=false&callback=initialize";
+            document.body.appendChild(script);
+        }
+
+
 
 // YELP api
 // $.ajax({
@@ -133,8 +152,6 @@ database.ref().on("child_added", function(childSnapshot, prevChildKey) {
 //     }).done(function(response) {
 //       console.log(response);
 //     });
-//
-//
 
 
  // src = "https://maps.googleapis.com/maps/api/js?key=AIzaSyARBt0KpGyGMoEle_MskA5Xz56lPvOJE7g&callback=initMap"

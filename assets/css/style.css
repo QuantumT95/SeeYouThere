@@ -19,14 +19,14 @@ body {
   width: 275px;
 }
 
-#map{
-  height: 400px;
-  width: 100%;
+#userLoc{
   display: none;
 }
 
-#userLoc{
-  display: none;
+#map_canvas { 
+	height: 400px;
+	width: 100%;
+	z-index: 1;
 }
 
 #topChoices{
