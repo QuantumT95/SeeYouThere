@@ -30,6 +30,31 @@ var googleMyKey = "AIzaSyB45u6q4Ep9T99aYb1tEo2NmkJ-vxJD8pk";
 
 // On window load will get and paste our latitude + longitude onto the page
 function loadFirst() {
+  $(".button-collapse").sideNav(); //makes the nav work
+
+
+  $(".friendList").on("click", function() {
+    $('.button-collapse').sideNav('hide'); //hide nav
+    //loading screen background-color
+    $("#main").hide();
+    // display preloader
+    $(".preloader-wrapper").show();
+    //spin for amoount of time
+    setTimeout(function() {
+      $('.preloader-wrapper').fadeOut();
+      $('.preloader-wrapper').delay(150).fadeOut('fast');
+      $(".preloader-wrapper").hide();
+      showMapChoices();
+    },2000);
+
+  });
+
+  function showMapChoices(){
+    console.log("beep");
+    $("#map_canvas").show();
+    $("#topChoices").show();
+  }
+
   var startPos;
   var geoSuccess = function(position) {
     startPos = position;
@@ -146,9 +171,6 @@ function loadScript() {
   }
 
 
-
-
-
 // YELP api
 // $.ajax({
 //       url: "https://api.yelp.com/oauth2/token",
@@ -159,28 +181,3 @@ function loadScript() {
 
 
  // src = "https://maps.googleapis.com/maps/api/js?key=AIzaSyARBt0KpGyGMoEle_MskA5Xz56lPvOJE7g&callback=initMap"
-
-
-$(".friendList").on("click", function() {
-  $('.button-collapse').sideNav('hide'); //hide nav
-  //loading screen background-color
-  $("#main").hide();
-  // display preloader
-  $(".preloader-wrapper").show();
-  //spin for amoount of time
-  setTimeout(function() {
-    $('.preloader-wrapper').fadeOut();
-    $('.preloader-wrapper').delay(150).fadeOut('fast');
-    $(".preloader-wrapper").hide();
-    showMapChoices();
-  },2000);
-
-});
-
-$(".button-collapse").sideNav(); //makes the nav work
-
-function showMapChoices(){
-  console.log("beep");
-  $("#map_canvas").show();
-  $("#topChoices").show();
-}
