@@ -152,11 +152,14 @@ var googleMyKey = "AIzaSyB45u6q4Ep9T99aYb1tEo2NmkJ-vxJD8pk";
 //     }).done(function(response) {
 //       console.log(response);
 //     });
+<<<<<<< HEAD
+=======
+//
+//
+>>>>>>> d9d18c88a6623a29b0f1c3a1c898c03f9fef8731
 
 
-
-
-// src = "https://maps.googleapis.com/maps/api/js?key=AIzaSyARBt0KpGyGMoEle_MskA5Xz56lPvOJE7g&callback=initMap"
+ // src = "https://maps.googleapis.com/maps/api/js?key=AIzaSyARBt0KpGyGMoEle_MskA5Xz56lPvOJE7g&callback=initMap"
 
 $(".button-collapse").sideNav(); //makes the nav work
 
@@ -171,16 +174,17 @@ $(".friendList").on("click", function() {
     $('.preloader-wrapper').fadeOut();
     $('.preloader-wrapper').delay(150).fadeOut('fast');
     $(".preloader-wrapper").hide();
-    $("#map").show();
+    showMapChoices();
   },2000);
 
-
-
+  // $("#map").show();
+  // $("#topChoices").show();
   //need to disaply map after time out is done showMap();
   //display location stuff
 });
 
-// function showMap(){
-//   console.log("beep");
-//   $("#map").show();
-// }
+function showMapChoices(){
+  console.log("beep");
+  $("#map").show();
+  $("#topChoices").show();
+}

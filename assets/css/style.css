@@ -22,14 +22,21 @@ body {
 #map{
   height: 400px;
   width: 100%;
+  display: none;
 }
 
 #userLoc{
   display: none;
 }
 
+<<<<<<< HEAD
 #map_canvas { 
 	height: 400px;
 	width: 100%;
 	z-index: 1;
 }
+
+#topChoices{
+    display: none;
+}
+
