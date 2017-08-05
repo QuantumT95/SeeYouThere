@@ -144,12 +144,8 @@ $(".friendList").on("click", function() {
     $('.preloader-wrapper').fadeOut();
     $('.preloader-wrapper').delay(150).fadeOut('fast');
     $(".preloader-wrapper").hide();
-    $("#userLoc").show(); //this isnt working????
-    $("#map").show();
   },2000);
-
-
-
+  $("#map").show();
   //need to disaply map after time out is done showMap();
   //display location stuff
 });
