@@ -152,9 +152,10 @@ database.ref().on("child_added", function(childSnapshot, prevChildKey) {
 //temporary object for holding the data
 
 //upload data to database
+// -34.397, 150.644 austrailia
 
 function initialize() {
-            var latlng = new google.maps.LatLng(-34.397, 150.644);
+            var latlng = new google.maps.LatLng(29.7251099,-95.5459889,3010);
             var myOptions = {
                 zoom: 8,
                 center: latlng,
