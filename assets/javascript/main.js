@@ -152,11 +152,6 @@ var googleMyKey = "AIzaSyB45u6q4Ep9T99aYb1tEo2NmkJ-vxJD8pk";
 //     }).done(function(response) {
 //       console.log(response);
 //     });
-<<<<<<< HEAD
-=======
-//
-//
->>>>>>> d9d18c88a6623a29b0f1c3a1c898c03f9fef8731
 
 
  // src = "https://maps.googleapis.com/maps/api/js?key=AIzaSyARBt0KpGyGMoEle_MskA5Xz56lPvOJE7g&callback=initMap"
