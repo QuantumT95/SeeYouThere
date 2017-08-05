@@ -14,7 +14,7 @@ firebase.initializeApp(config);
 var database = firebase.database();
 
 // Google maps API
-// async defer src="https://maps.googleapis.com/maps/api/js?key=YOUR_API_KEY&callback=initMap"
+// async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyB45u6q4Ep9T99aYb1tEo2NmkJ-vxJD8pk&callback=initMap"
 
 // apiKey: "AIzaSyB45u6q4Ep9T99aYb1tEo2NmkJ-vxJD8pk"
 
@@ -24,7 +24,7 @@ src = "https://www.googleapis.com/geolocation/v1/geolocate?key=AIzaSyB45u6q4Ep9T
 // Google Maps API v3 - create google maps on fly and add our current position to it
 src = "//maps.googleapis.com/maps/api/js?v=3.exp&sensor=true"
 
-// https://maps.googleapis.com/maps/api/js?key=AIzaSyARBt0KpGyGMoEle_MskA5Xz56lPvOJE7g&callback=initMap
+src = "https://maps.googleapis.com/maps/api/js?key=AIzaSyARBt0KpGyGMoEle_MskA5Xz56lPvOJE7g&callback=initMap"
 
 // On window load will get and paste our latitude + longitude onto the page
 window.onload = function() {
@@ -126,10 +126,18 @@ database.ref().on("child_added", function(childSnapshot, prevChildKey) {
 //upload data to database
 
 
+// YELP api
+// $.ajax({
+//       url: "https://api.yelp.com/oauth2/token",
+//       method: "POST"
+//     }).done(function(response) {
+//       console.log(response);
+//     });
+//
+//
 
 
-// https://maps.googleapis.com/maps/api/js?key=AIzaSyARBt0KpGyGMoEle_MskA5Xz56lPvOJE7g&callback=initMap
-
+ // src = "https://maps.googleapis.com/maps/api/js?key=AIzaSyARBt0KpGyGMoEle_MskA5Xz56lPvOJE7g&callback=initMap"
 
 $(".button-collapse").sideNav(); //makes the nav work
 
@@ -144,15 +152,17 @@ $(".friendList").on("click", function() {
     $('.preloader-wrapper').fadeOut();
     $('.preloader-wrapper').delay(150).fadeOut('fast');
     $(".preloader-wrapper").hide();
+    showMapChoices();
   },2000);
-  $("#map").show();
+
+  // $("#map").show();
+  // $("#topChoices").show();
   //need to disaply map after time out is done showMap();
   //display location stuff
 });
 
-
-//thought maybe intsead I could call this function inside the time out ?
-// function showMap(){
-//   console.log("beep");
-//   $("#map").show();
-// }
+function showMapChoices(){
+  console.log("beep");
+  $("#map").show();
+  $("#topChoices").show();
+}

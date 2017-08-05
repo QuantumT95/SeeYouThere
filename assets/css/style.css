@@ -28,3 +28,7 @@ body {
 #userLoc{
   display: none;
 }
+
+#topChoices{
+    display: none;
+}
