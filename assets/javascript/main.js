@@ -26,8 +26,10 @@ src = "//maps.googleapis.com/maps/api/js?v=3.exp&sensor=true"
 
 // src = "https://maps.googleapis.com/maps/api/js?key=AIzaSyARBt0KpGyGMoEle_MskA5Xz56lPvOJE7g&callback=initMap"
 
+var googleMyKey = "AIzaSyB45u6q4Ep9T99aYb1tEo2NmkJ-vxJD8pk";
+
 // On window load will get and paste our latitude + longitude onto the page
-window.onload = function() {
+function loadFirst() {
   var startPos;
   var geoSuccess = function(position) {
     startPos = position;
@@ -35,6 +37,7 @@ window.onload = function() {
     document.getElementById('startLon').innerHTML = startPos.coords.longitude;
   };
   navigator.geolocation.getCurrentPosition(geoSuccess);
+  loadScript();
 };
 
 // Set long + lat to local storage so we can refer to it later on
@@ -135,13 +138,14 @@ function initialize() {
         myOptions);
 }
 
-var googleMyKey = "AIzaSyB45u6q4Ep9T99aYb1tEo2NmkJ-vxJD8pk";
-        function loadScript(){
-            var script = document.createElement('script');
-            script.type = 'text/javascript';
-            script.src = "https://maps.googleapis.com/maps/api/js?key=" + googleMyKey + "&sensor=false&callback=initialize";
-            document.body.appendChild(script);
-        }
+function loadScript() {
+    var script = document.createElement('script');
+    script.type = 'text/javascript';
+    script.src = "https://maps.googleapis.com/maps/api/js?key=" + googleMyKey + "&callback=initialize";
+    document.body.appendChild(script);
+  }
+
+
 
 
 
