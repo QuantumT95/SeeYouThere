@@ -1,32 +1,24 @@
-#header{
+#header {
   background-color: #7b1fa2;
+  font-family: 'Patua One', cursive;
 
 }
 
-#card{
+#card {
   background-color: #FFFFFF;
 }
 
-body{
+body {
   background-color: #d1c4e9;
 }
 
-#loader{
+#loader {
   display: none;
-  position:relative;
+  position: relative;
   height: 275px;
   width: 275px;
-
 }
 
-
-
-/*
-btn{
-position: 50%;
-
+#map{
+  display: none;
 }
-
-#submit{
-
-}*/
