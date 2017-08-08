@@ -30,6 +30,7 @@ var googleMyKey = "AIzaSyB45u6q4Ep9T99aYb1tEo2NmkJ-vxJD8pk";
 
 // On window load will get and paste our latitude + longitude onto the page
 function loadFirst() {
+
   // var startPos;
   // var geoSuccess = function(position) {
   //   startPos = position;
@@ -37,6 +38,39 @@ function loadFirst() {
   //   document.getElementById('startLon').innerHTML = startPos.coords.longitude;
   // };
   // navigator.geolocation.getCurrentPosition(geoSuccess);
+
+  $(".button-collapse").sideNav(); //makes the nav work
+
+
+  $(".friendList").on("click", function() {
+    $('.button-collapse').sideNav('hide'); //hide nav
+    //loading screen background-color
+    $("#main").hide();
+    // display preloader
+    $(".preloader-wrapper").show();
+    //spin for amoount of time
+    setTimeout(function() {
+      $('.preloader-wrapper').fadeOut();
+      $('.preloader-wrapper').delay(150).fadeOut('fast');
+      $(".preloader-wrapper").hide();
+      showMapChoices();
+    },2000);
+
+  });
+
+  function showMapChoices(){
+    console.log("beep");
+    $("#map_canvas").show();
+    $("#topChoices").show();
+  }
+
+  var startPos;
+  var geoSuccess = function(position) {
+    startPos = position;
+    document.getElementById('startLat').innerHTML = startPos.coords.latitude;
+    document.getElementById('startLon').innerHTML = startPos.coords.longitude;
+  };
+  navigator.geolocation.getCurrentPosition(geoSuccess);
   loadScript();
 };
 
@@ -127,9 +161,10 @@ database.ref().on("child_added", function(childSnapshot, prevChildKey) {
 //temporary object for holding the data
 
 //upload data to database
+// -34.397, 150.644 austrailia
 
 function initialize() {
-            var latlng = new google.maps.LatLng(-34.397, 150.644);
+            var latlng = new google.maps.LatLng(29.7251099,-95.5459889,3010);
             var myOptions = {
                 zoom: 8,
                 center: latlng,
@@ -144,6 +179,7 @@ function loadScript() {
     script.src = "https://maps.googleapis.com/maps/api/js?key=" + googleMyKey + "&callback=initialize";
     document.body.appendChild(script);
   }
+
 
 // YELP api
 // "url": "https://api.yelp.com/v3/businesses/search?location=77083",
@@ -175,31 +211,3 @@ $.ajax(yelp).done(function (response) {
 
 
  // src = "https://maps.googleapis.com/maps/api/js?key=AIzaSyARBt0KpGyGMoEle_MskA5Xz56lPvOJE7g&callback=initMap"
-
-$(".button-collapse").sideNav(); //makes the nav work
-
-$(".friendList").on("click", function() {
-  $('.button-collapse').sideNav('hide'); //hide nav
-  //loading screen background-color
-  $("#main").hide();
-  // display preloader
-  $(".preloader-wrapper").show();
-  //spin for amoount of time
-  setTimeout(function() {
-    $('.preloader-wrapper').fadeOut();
-    $('.preloader-wrapper').delay(150).fadeOut('fast');
-    $(".preloader-wrapper").hide();
-    showMapChoices();
-  },2000);
-
-  // $("#map").show();
-  // $("#topChoices").show();
-  //need to disaply map after time out is done showMap();
-  //display location stuff
-});
-
-function showMapChoices(){
-  console.log("beep");
-  $("#map").show();
-  $("#topChoices").show();
-}

@@ -24,9 +24,14 @@ body {
 }
 
 #map_canvas { 
-	height: 400px;
-	width: 100%;
+	height: 300px;
+	width: 800px;
+  display: none;
+
 }
 
 #topChoices{
     display: none;
+    padding-top: 10px;
+
+}
