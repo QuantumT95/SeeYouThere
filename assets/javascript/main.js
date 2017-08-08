@@ -30,32 +30,32 @@ var googleMyKey = "AIzaSyB45u6q4Ep9T99aYb1tEo2NmkJ-vxJD8pk";
 
 // On window load will get and paste our latitude + longitude onto the page
 function loadFirst() {
-  var startPos;
-  var geoSuccess = function(position) {
-    startPos = position;
-    document.getElementById('startLat').innerHTML = startPos.coords.latitude;
-    document.getElementById('startLon').innerHTML = startPos.coords.longitude;
-  };
-  navigator.geolocation.getCurrentPosition(geoSuccess);
+  // var startPos;
+  // var geoSuccess = function(position) {
+  //   startPos = position;
+  //   document.getElementById('startLat').innerHTML = startPos.coords.latitude;
+  //   document.getElementById('startLon').innerHTML = startPos.coords.longitude;
+  // };
+  // navigator.geolocation.getCurrentPosition(geoSuccess);
   loadScript();
 };
 
 // Set long + lat to local storage so we can refer to it later on
-setTimeout(function() {
-  console.log($("#startLon").text());
-}, 6000);
+// setTimeout(function() {
+//   console.log($("#startLon").text());
+// }, 6000);
 
-setTimeout(function() {
-  localStorage.setItem("longitude", $("#startLon").text());
-}, 6000);
+// setTimeout(function() {
+//   localStorage.setItem("longitude", $("#startLon").text());
+// }, 6000);
 
-setTimeout(function() {
-  console.log($("#startLat").text());
-}, 6000);
+// setTimeout(function() {
+//   console.log($("#startLat").text());
+// }, 6000);
 
-setTimeout(function() {
-  localStorage.setItem("latitude", $("#startLat").text());
-}, 6000);
+// setTimeout(function() {
+//   localStorage.setItem("latitude", $("#startLat").text());
+// }, 6000);
 
 // global variable for name and addresses
 var id = [];
@@ -145,16 +145,33 @@ function loadScript() {
     document.body.appendChild(script);
   }
 
-
-
-
 // YELP api
-// $.ajax({
-//       url: "https://api.yelp.com/oauth2/token",
-//       method: "POST"
-//     }).done(function(response) {
-//       console.log(response);
-//     });
+// "url": "https://api.yelp.com/v3/businesses/search?location=77083",
+
+
+var location = '77083',
+
+var yelp = {
+  //"async": true,
+  //"crossDomain": true,
+  "url":"https://still-castle-31920.herokuapp.com/",
+  "method": "GET",
+  "data": {
+      "term":'restaurants',
+      "location": '77083',
+      "radius": '16093',
+      "open_now": 'true'
+  },
+  "headers": {
+    //"authorization": "Bearer IwuIlUt2cqn7UOVRTabK04434_6hWZgLZmfz4nBU9KpqjMnXbMBX9qQzCGQzk0HNRNtUef3T5eE3O1JM8w4Kunf-sE1lznXQKbV7YDQMgkHPkbaG0oQ3KJAQL-CFWXYx"
+    //"cache-control": "no-cache",
+    // "postman-token": "cd21ac1e-b1bd-efd5-2535-9d0d52d7d1aa"
+  }
+}
+
+$.ajax(yelp).done(function (response) {
+  console.log(response);
+});
 
 
  // src = "https://maps.googleapis.com/maps/api/js?key=AIzaSyARBt0KpGyGMoEle_MskA5Xz56lPvOJE7g&callback=initMap"
